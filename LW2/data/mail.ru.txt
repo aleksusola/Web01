@@ -1,4 +1,0 @@
-First name: alexey
-Last name: ivanov
-Email: mail.ru
-Age: 20

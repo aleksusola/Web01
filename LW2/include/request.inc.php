@@ -6,6 +6,5 @@
         {
             $result = $_GET[$paramName]);
         }
-        return $result
+        return $result;
     }
-    function getView($templatename, $vars = array())
