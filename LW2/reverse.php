@@ -1,5 +1,5 @@
 <?php
-    header('Content-Type: text/html; charset=utf-8');
+    header('Content-Type: text/plain');
     require_once ('include/string.inc.php');
 
     if (isset($_GET['str']) && $_GET['str']) 

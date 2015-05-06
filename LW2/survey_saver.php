@@ -1,5 +1,5 @@
 <?php
-    header('Content-Type: text/html; charset=utf-8');
+    header('Content-Type: text/plain');
 
     $first_name = isset($_GET['first_name']) ? $_GET['first_name'] : '';
     $last_name = isset($_GET['last_name']) ? $_GET['last_name'] : '';

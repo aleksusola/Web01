@@ -1,6 +1,7 @@
 <?php
-    header('Content-Type: text; charset=utf-8');
-    $email = isset($_GET['email']) ? $_GET['email'] : '';
+    header('Content-Type: text/plain');
+    
+	$email = isset($_GET['email']) ? $_GET['email'] : '';
 
     if ($email) 
     {
