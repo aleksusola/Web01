@@ -1,11 +1,11 @@
 <?php
-    function GetParamFromGet($paramName, $defaultValue = '')
+    function GetParamFromGet ($paramName, $defaultValue = '')
     {
         $result = $defaultValue;
-        if (isset($_GET[$paramName]))
+        
+		if (isset($_GET[$paramName]))
         {
-            $result = $_GET[$paramName]);
+            $result = $_GET[$paramName];
         }
-        return $result
+        return $result;
     }
-    function getView($templatename, $vars = array())
