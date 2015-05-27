@@ -1,23 +1,41 @@
 <?php
+    require_once(dirname(__FILE__) . '/include/request.inc.php');
     header('Content-Type: text/plain');
-
-    $first_name = isset($_GET['first_name']) ? $_GET['first_name'] : '';
-    $last_name = isset($_GET['last_name']) ? $_GET['last_name'] : '';
-    $email = isset($_GET['email']) ? $_GET['email'] : '';
-    $age = isset($_GET['age']) ? $_GET['age'] : '';
-
-    if ($email) 
+    
+	function GetSurveyFromRequest()
     {
-        $file_name = dirname(__FILE__) . '/data/' . $email . '.txt';
-        $data = "First name: $first_name\r\nLast name: $last_name\r\nEmail: $email\r\nAge: $age\r\n";
-
+	$info = array
+	(
+	    'first_name' => GetParamFromGet('first_name', ''),
+	    'last_name' => GetParamFromGet('last_name', ''),
+	    'email' => GetParamFromGet('email', ''),
+	    'age' => GetParamFromGet('age', '')
+	);
+	return $info;
+    }
+    function GetSurveyFilePath($email)
+    {
+        return dirname(__FILE__) . '/data/' . $email . '.txt';
+    }
+    function SaveSurveyToFile($survey)
+    {
+	$path = GetSurveyFilePath($survey['email']);
+        //save to file
+        
+        $data = serialize($survey);
         if (function_exists('file_put_contents')) 
         {
-            file_put_contents($file_name, $data);
+            file_put_contents($path, $data);
         } else 
         {
-            $handle = fopen($file_name, 'a');
+            $handle = fopen($path, 'a');
             fwrite($handle, $data);
             fclose($handle);
         } 
+    }
+    $survey = GetSurveyFromRequest();
+    
+    if (!empty($survey))
+    {
+         SaveSurveyToFile($survey);
     }

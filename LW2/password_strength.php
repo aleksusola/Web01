@@ -1,27 +1,59 @@
 <?php
     $password = isset($_GET['password']) ? $_GET['password'] : '';
-    $strength = 0;
-    $password = preg_replace ( '/[^a-zA-Z0-9]/', '', $password);
     
-    if ($password) 
+	$password = preg_replace ( '/[^a-zA-Z0-9]/', '', $password);
+	
+	function CalcPasswordStrength($password)
     {
-		$password_length = strlen($password);
-        //$strength += 4 * $password_length;
-        $digits_count = strlen(preg_replace('/[^\d]/', '', $password));
-        //$strength += 4 * $digits_count;
-        $low_count = strlen(preg_replace('/[^a-z0-9]/', '', $password));
-        //$strength += ($password_length - $low_count) * 2;
-        $upp_count = strlen(preg_replace('/[^A-Z0-9]/', '', $password));
-        //$strength += ($password_length - $upp_count) * 2;
-		$strength = 4 * $password_length + 4 * $digits_count + ($password_length - $low_count) * 2 + ($password_length - $upp_count) * 2;
-        if (preg_replace('/[^0-9]/', '', $password) != $password)
+        $strength = 0;
+        $strength += CalcStrengthForLength($password);
+        $strength += CalcStrengthForDigits($password);
+        $strength += CalcStrengthForLowCount($password);
+		$strength += CalcStrengthForUpCount($password);
+		$strength -= CalcStrengthForLetter($password);
+		$strength -= CalcStrengthForNumber($password);
+		$strength -= CalcStrengthForDouble($password);
+		return $strength;
+    }
+
+    function CalcStrengthForLength($password)
+    {
+        return 4 * strlen($password);
+    }
+
+    function CalcStrengthForDigits($password)
+    {
+        return 4 * strlen(preg_replace('/[^\d]/', '', $password));
+    }
+	
+	function CalcStrengthForLowCount($password)
+	{
+		return 4 * strlen(preg_replace('/[^a-z]/', '', $password));
+	}
+	    function CalcStrengthForUpCount($password)
+    {
+        return 4 * strlen(preg_replace('/[^A-Z]/', '', $password));
+    }
+    
+    function CalcStrengthForLetter($password)
+    {
+        if (preg_replace('/[^a-zA-Z]/', '', $password) == $password)
         {
-            $strength -= $password_length;
+            return strlen($password);
         }
-        if (preg_replace('/[^a-zA-Z]/', '', $password) != $password) 
+    }
+    
+    function CalcStrengthForNumber($password)
+    {
+        if (preg_replace('/[^0-9]/', '', $password) == $password)
         {
-            $strength -= $password_length;
+            return strlen($password);
         }
+    }
+    
+    function CalcStrengthForDouble($password)
+    {
+        $mass = 0;
         $chars_array = count_chars($password);
         if (is_array($chars_array) && count($chars_array) > 0) 
         {  
@@ -29,9 +61,10 @@
             {
                 if ($counter > 1) 
                 {
-                    $strength -= $counter;
+                    $mass = $counter;
                 }
             }  
         }
+        return $mass;
     }
-    echo "Мощность пароля равна ".$strength //.$password_length .$digits_count .$low_count .$upp_count;
+    echo "Мощность пароля равна ".$strength;

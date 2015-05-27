@@ -9,6 +9,11 @@
 
         if (is_file($file_name) && function_exists('file_get_contents')) 
         {
-            echo file_get_contents($file_name);
+            $data = unserialize(file_get_contents($file_name));
+            
+            echo 'Email: ' . $data['email'] . "\r\n";
+            echo 'First name: ' . $data['first_name'] . "\r\n";
+            echo 'Last name: ' . $data['last_name'] . "\r\n";
+            echo 'Age: ' . $data['age'] . "\r\n";
         }
     }
