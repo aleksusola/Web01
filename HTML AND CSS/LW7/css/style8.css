@@ -59,6 +59,7 @@ li.address
 {
     padding-top: 16px;
     background: url(../images/phone.png) 14px 12px no-repeat;
+	background-position-x: 10px;
 }
 
 .fax
@@ -74,6 +75,7 @@ li.address
 li.name
 {
     background: url(../images/address.png) 6px 7px no-repeat;
+	background-position-x: 7px;
     font-size: 16px;
     padding-top: 12px;
     padding-bottom: 9px;
