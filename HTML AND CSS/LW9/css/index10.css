@@ -1,0 +1,51 @@
+.box
+{
+    width: 400px;
+    height: 400px;
+    background: #0099cc;
+    position: relative;
+    margin: 50px auto;
+}
+
+.red
+{
+    width: 70px;
+    height: 70px;
+    background: red;
+    position: absolute;
+}
+
+.green
+{
+    width: 100px;
+    height: 100px;
+    background: #00cc00;
+    position: absolute;
+}
+
+.top
+{
+    top:0;
+}
+
+.bottom
+{
+    bottom:0;
+}
+
+.left
+{
+    left:0;
+}
+
+.right
+{
+    right:0;
+}
+
+.center
+{
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+}

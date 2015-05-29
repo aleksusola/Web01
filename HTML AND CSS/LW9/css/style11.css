@@ -1,0 +1,62 @@
+body
+{
+    font-family: Arial;
+	font-weight: normal;
+}
+
+h1
+{
+    border-bottom: 2px solid blue;
+}
+
+.cat
+{
+    width: 220px;
+    height: 205px;
+    border: solid 1px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+p
+{
+    color: rgb(50,50,46);
+    margin: 0;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold; 
+}
+
+.img1
+{
+    background: url("../images/texture1.jpg");
+}
+
+.img2
+{
+    background: url("../images/texture3.jpg"); 
+}
+
+.img3
+{
+    background: url("../images/texture2.jpg"); 
+}
+
+.buttom_link
+{
+    border:none;
+    width: 298px;
+    height: 55px;
+    background: url("../images/button.png");
+    font-weight: bold;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.buttom_link:hover
+{
+    background: url("../images/button-over.png"); 
+	cursor: pointer;
+}
