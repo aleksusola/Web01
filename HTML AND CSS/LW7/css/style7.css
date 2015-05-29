@@ -25,7 +25,7 @@ body
     padding-top: 7px;
     border-bottom: solid 6px;
     background: url(../images/arrow.png) 1px center no-repeat;
-	background-position-x: -5px;
+	background-position-x: -4px;
     padding-left: 28px;
 }
 
@@ -48,6 +48,7 @@ body
     padding-left: 28px;
     font-size: 12px;
     background: url(../images/checkbox.png) 0 14px no-repeat;
-	background-position: -1px 14px;
+	background-position: -1px 13px;
     line-height: 14px;
+	color: rgb(133,133,133);
 }
