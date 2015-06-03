@@ -1,7 +1,7 @@
 <?php
     header('Content-Type: text/plain');
     
-	$email = isset($_GET['email']) ? $_GET['email'] : '';
+    $email = isset($_GET['email']) ? $_GET['email'] : '';
 
     if ($email) 
     {
@@ -17,3 +17,5 @@
             echo 'Age: ' . $data['age'] . "\r\n";
         }
     }
+	
+	buildLayout('survey.html', $vars); 

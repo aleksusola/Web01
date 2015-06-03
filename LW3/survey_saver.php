@@ -2,11 +2,11 @@
     require_once(dirname(__FILE__) . '/include/request.inc.php');
     header('Content-Type: text/plain');
     require_once ('include/string.inc.php');
-	
-	$email= GetSurveyFilePath($email);
+    
+    $email= GetSurveyFilePath($email);
     $survey = GetSurveyFromRequest();
-	
-	if ( $survey['email'] == '')
+    
+    if ( $survey['email'] == '')
     {
         exit();
     } 
@@ -15,3 +15,5 @@
     {
          SaveSurveyToFile($survey);
     }
+    
+    buildLayout('survey_saver_echo.html', $vars); 
