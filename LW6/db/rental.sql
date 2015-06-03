@@ -28,7 +28,7 @@ mysql> CREATE TABLE offer
     -> return_date DATE
     -> );
     
-/* ДВД */
+/* dvd */
 mysql> INSERT INTO dvd
     -> (title, production_year)
     -> VALUES
@@ -52,10 +52,10 @@ mysql> INSERT INTO customer
 mysql> INSERT INTO offer
     -> (dvd_id, customer_id, offer_date)
     -> VALUES
-    -> (1, 1, '2015-03-27'),
-    -> (1, 2, '2015-01-01'),
-    -> (2, 3, '2014-03-27'),
-    -> (3, 4, '2015-03-27'),
+    -> (1, 3, '2015-03-27'),
+    -> (1, 4, '2015-01-01'),
+    -> (2, 2, '2014-03-27'),
+    -> (3, 1, '2015-03-27'),
     -> (4, 2, '2014-12-27');
     
 /* Возврат */    
