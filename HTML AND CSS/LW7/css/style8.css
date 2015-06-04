@@ -57,25 +57,27 @@ li.address
 
 .phone
 {
-    padding-top: 16px;
+    padding-top: 14px;
     background: url(../images/phone.png) 14px 12px no-repeat;
-	background-position-x: 10px;
+	background-position: 7px 11px;
 }
 
 .fax
 {
-    background: url(../images/fax.png) 9px 9px no-repeat;
+	background: url(../images/fax.png) 9px 9px no-repeat;
+	background-position: 6px 6px;
 }
 
 .email
 {
     background: url(../images/mail.png) 8px center no-repeat;
+	background-position: 6px 8px;
 }
 
 li.name
 {
     background: url(../images/address.png) 6px 7px no-repeat;
-	background-position-x: 7px;
+	background-position: 5px 5px;
     font-size: 16px;
     padding-top: 12px;
     padding-bottom: 9px;

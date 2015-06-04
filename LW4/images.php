@@ -10,7 +10,7 @@
     
     foreach($files as $file) 
 	{
-        if (is_file(dirname(
+        if (is_file(dirname(__FILE__) . $dir . $_GET['file']))
 		{
             echo "<a target='_blank' href=" . $dir . $file . ">" . $file . "</a>&nbsp;<a href='images.php?action=delete&file=" . $file . "'>Óäàëèòü</a><br />";
         }
