@@ -47,7 +47,7 @@ body
     padding-top: 16px;
     padding-left: 28px;
     font-size: 12px;
-    background: url(../images/checkbox.png) 0 14px no-repeat;
+    background: url(../images/checkbox.png) no-repeat;
 	background-position: -1px 13px;
     line-height: 14px;
 	color: rgb(133,133,133);
