@@ -77,9 +77,9 @@ p
     background-color: #bc8f8f;
     border: 1px solid #ffd700;
     border-radius: 13px;
-	position: absolute;
-	top: 62px;
-    right: 545px;
+	position: relative;
+    top: -228px;
+    right: -193px;
 	color: white;
     font-weight: bold;
     font-size: 14px;
