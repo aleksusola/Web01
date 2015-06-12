@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+<body>
 <h1>Surveys</h1>
 <ul>
   {foreach from=$files item=file}
@@ -6,3 +9,5 @@
     </li>
   {/foreach}
 </ul>
+</body>
+</html>

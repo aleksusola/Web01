@@ -1,4 +1,5 @@
-    function GetSurveyFromRequest()
+ <?php    
+	function GetSurveyFromRequest()
     {
 	    $info = array
 	    (
@@ -23,9 +24,11 @@
         if (function_exists('file_put_contents')) 
         {
             file_put_contents($path, $data);
-        } else 
+        } 
+		else 
         {
-            $handle = fopen($path, 'a');
+            if $handle
+			$handle = fopen($path, 'a');
             fwrite($handle, $data);
             fclose($handle);
         } 

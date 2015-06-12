@@ -23,19 +23,19 @@ h1
 	text-align: center;
 	font-weight: normal;
 	margin-top: 10px;
-	margin-bottom: 35px;
 }
 
 .cats
 {
-    width: 736px;
-    margin-left: 35px;
+    width: 800px;
+	padding-top: 35px;
 }
 
 .cat
 {
     width: 220px;
     height: 203px;
+	position: relative;
     border: solid 1px;
     margin-bottom: 20px;
 	margin-left: 35px;
@@ -77,10 +77,10 @@ p
     background-color: #bc8f8f;
     border: 1px solid #ffd700;
     border-radius: 13px;
-	position: relative;
-    top: -228px;
-    right: -193px;
-	color: white;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    color: white;
     font-weight: bold;
     font-size: 14px;
     padding-top: 8px;

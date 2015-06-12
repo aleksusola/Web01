@@ -24,8 +24,8 @@ body
     height: 29px;
     padding-top: 7px;
     border-bottom: solid 6px;
-    background: url(../images/arrow.png) 1px center no-repeat;
-	background-position-x: -4px;
+    background: url(../images/arrow.png) no-repeat;
+	background-position: -4px 10px;
     padding-left: 28px;
 }
 

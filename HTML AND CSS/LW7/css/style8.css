@@ -14,7 +14,7 @@ body
 {
     width: 321px;
     height: 283px;
-    margin: 20px 30px;
+    margin: 21px 29px;
     padding-left: 43px;
     border-left: solid 1px #e5e5e5;
 }
@@ -23,7 +23,7 @@ h2
 {
     padding-left: 8px;
     font: 23px Arial;
-    padding-bottom: 11px;
+    padding-bottom: 10px;
     color: #565656;
 }
 
@@ -58,25 +58,25 @@ li.address
 .phone
 {
     padding-top: 14px;
-    background: url(../images/phone.png) 14px 12px no-repeat;
+    background: url(../images/phone.png) no-repeat;
 	background-position: 7px 11px;
 }
 
 .fax
 {
-	background: url(../images/fax.png) 9px 9px no-repeat;
+	background: url(../images/fax.png) no-repeat;
 	background-position: 6px 6px;
 }
 
 .email
 {
-    background: url(../images/mail.png) 8px center no-repeat;
+    background: url(../images/mail.png) no-repeat;
 	background-position: 6px 8px;
 }
 
 li.name
 {
-    background: url(../images/address.png) 6px 7px no-repeat;
+    background: url(../images/address.png) no-repeat;
 	background-position: 5px 5px;
     font-size: 16px;
     padding-top: 12px;
