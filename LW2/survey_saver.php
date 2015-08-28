@@ -2,16 +2,32 @@
     require_once(dirname(__FILE__) . '/include/request.inc.php');
     header('Content-Type: text/plain');
     require_once ('include/user.inc.php');
-	
-    $survey = GetSurveyFromRequest();
-	$email= GetSurveyFilePath($email);
-	
-	if ( $survey['email'] == '')
-    {
-        exit();
-    } 
     
-    if (!empty($survey))
+    $first_name = GetParamFromGet('first_name');		
+    $last_name = GetParamFromGet('last_name');    		
+    $age = GetParamFromGet('age');
+
+    $email = GetParamFromGet('email');
+    if ($email == "") 
     {
-        SaveSurveyToFile($survey);
+        echo "E-Mail not specified";
+        exit;
+    }   
+   
+    $filePath = GetFilePath($email);
+    if (file_exists($filePath))
+    {
+        echo 'E -Mail is already in use , specify a different';
+        exit;
     }
+        
+    $data = array
+        (
+            "Email" => $email,
+            "First Name" => $first_name,
+            "Last Name" => $last_name,
+            "Age" => $age
+        );      
+   
+    $result = DataInFile($filePath, $data);
+    echo $result;

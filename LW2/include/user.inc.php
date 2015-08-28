@@ -1,35 +1,34 @@
- <?php
-    function GetSurveyFromRequest()
+<?php
+    function GetFilePath($email)
     {
-	    $info = array
-	    (
-	        'first_name' => GetParamFromGet('first_name', ''),
-	        'last_name' => GetParamFromGet('last_name', ''),
-	        'email' => GetParamFromGet('email', ''),
-	        'age' => GetParamFromGet('age', '')
-	    );
-	    return $info;
+        $filePath = "data/{$email}.txt";
+        return $filePath;
     }
-	
-    function GetSurveyFilePath($email)
+  
+    function DataInFile($filePath, $data)
     {
-        return dirname(__FILE__) . '/data/' . $email . '.txt';
+        foreach ($data as $key => $value)
+        {
+            file_put_contents($filePath, "{$key}:{$value}\r\n", FILE_APPEND);
+        }
+        return 'Data are added successfully';
     }
-	
-    function SaveSurveyToFile($survey)
+   
+    function DataFromFile($filePath)
     {
-	    $path = GetSurveyFilePath($survey['email']);
-        
-        $data = serialize($survey);
-        if (function_exists('file_put_contents')) 
+        $data = file($filePath);
+        foreach ($data as $line)
         {
-            file_put_contents($path, $data);
-        } 
-		else 
+            list($key , $value) = explode(':' , $line);
+            $info[$key] = $value;
+        }
+        return $info;
+    }
+    
+    function PrintDataArrey($arrey) 
+    {
+        foreach ($arrey as  $key => $value)
         {
-            if $handle
-			$handle = fopen($path, 'a');
-            fwrite($handle, $data);
-            fclose($handle);
-        } 
+            echo ("{$key} : {$value} <br>");
+        }    
     }

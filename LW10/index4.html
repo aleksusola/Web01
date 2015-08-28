@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+	<script type="text/javascript" src="./js/register.js"></script>
+    <meta charset="utf-8"> 
+<style>
+    #registration_form
+    {
+        width: 200px;
+        height: 300px;
+    }
+    div label 
+    {
+        float: left;
+        margin: 10px 10px 10px 10px;
+    }
+    input[type="submit"]
+    {
+        margin-top: 20px;
+    }
+</style>  
+</head>
+<body>
+    <div id="registration_form">  
+        <form  action="" onSubmit="return checkData()">
+			<label>Логин:<input name="username" type="text" id="login" value="" size="20" maxlength="25"/></label>
+			<label>Пароль:<input name="password" type="password" id="pass" value="" /></label>
+			<label>Email: <input name="email" type="email" id="mail" value="" /></label>
+			<input name="submit" value="Send" type="submit" id="btn" />
+        </form>
+    </div> 
+</body>
+</html>	

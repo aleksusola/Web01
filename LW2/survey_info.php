@@ -1,19 +1,22 @@
 <?php
+    require_once(dirname(__FILE__) . '/include/request.inc.php');
     header('Content-Type: text/plain');
+    require_once ('include/user.inc.php');
     
-	$email = isset($_GET['email']) ? $_GET['email'] : '';
-
-    if ($email) 
+    $email = GetParamFromGet('email');
+    if ($email == "") 
     {
-        $file_name = dirname(__FILE__) . '/data/' . $email . '.txt';
-
-        if (is_file($file_name) && function_exists('file_get_contents')) 
-        {
-            $data = unserialize(file_get_contents($file_name));
-            
-            echo 'Email: ' . $data['email'] . "\r\n";
-            echo 'First name: ' . $data['first_name'] . "\r\n";
-            echo 'Last name: ' . $data['last_name'] . "\r\n";
-            echo 'Age: ' . $data['age'] . "\r\n";
-        }
+        echo "E-Mail not specified";
+        exit;
+    } 
+    
+    $filePath = GetFilePath($email);
+    if (!file_exists($filePath))
+    {
+        echo 'E-mail can not be found , please try again';
+        exit;
     }
+    
+    $data =  DataFromFile($filePath);
+    
+    PrintDataArrey($data);

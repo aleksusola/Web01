@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Игра "Пятнашки"</title>
+	<script type="text/javascript" src="./js/game.js"></script>
+    <meta charset="utf-8"> 
+    <style>        
+        #steps {
+            display:none;
+            text-align:center;
+            color: black;
+        }
+		#btns {
+            text-align:center;
+        }
+    </style>
+</head> 
+<body>
+    <center>
+        <button id="start" type="button" style="display:block" onClick="start_game();">Начать новую игру</button>
+        <button id="reset" type="button" style="display:none" onClick="location.reload();">Закончить игру</button>
+    </center>
+    <div id="steps"></div>
+    <center id="num8"></center>
+</body>
+</html>
