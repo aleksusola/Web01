@@ -14,4 +14,4 @@
         'table' => $table
     );
 
-    buildLayout('index.html', $vars);
+    buildLayout('sinus.html', $vars);
