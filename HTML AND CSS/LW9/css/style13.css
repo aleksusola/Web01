@@ -10,8 +10,8 @@
 
 *
 {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .clear
@@ -260,6 +260,7 @@ a:hover
     font: normal 12px Tahoma;
     padding-left: 7px;
     background: url(../images/more_arrow.png) 43px no-repeat black;
+	float: right;
 }
 
 .more:hover
@@ -333,8 +334,8 @@ a:hover
     display: block;
     font: normal 18px verdana;
     color: #f2ac04;
-    margin-top: -2px;
-    margin-bottom: 1px;
+    margin-top: -1px;
+    margin-bottom: 0px;
 }
 
 .news_title
@@ -384,16 +385,47 @@ a:hover
 {
     margin-top: 16px;
 }
+/*preview_article*/
+
+.preview_article
+{
+	width: 267px;
+    height: 283px;
+	margin-top: 13px;
+	margin-left: 17px;
+	margin-right: 15px;
+	padding: 20px;
+	float: left;
+}
+
+.preview_article h2
+{
+    font: normal 18px Arial;
+    color: #565656;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+    margin-left: -1px;
+}
+
+.text
+{
+	font: normal 16px Tahoma;
+    color: #565656;
+	padding-bottom: 18px;
+	line-height: 23px;
+}
 
 /*contact_us*/
 
 .contact_us 
 {
-    width: 321px;
+    width: 248px;
     height: 283px;
+	
+    margin-top: 28px;
     padding-left: 43px;
     border-left: solid 1px #e5e5e5;
-    float: right;
+    float: left;
 }
 
 .contact_us h2
@@ -467,12 +499,67 @@ li.address
 
 .our_clients
 {
+	width: 926px;
+	height: 105px;
+	border-top: solid 1px #cccccc;
+    margin-left: 42px;
+	margin-top: 41px;
+}
 
+.our_clients h2
+{
+	font: normal 14px Tahoma;
+    color: #565656;
+    text-transform: uppercase;
+	margin-top: -9px;
+	margin-left: 38px;
+	background-color: white;
+	padding-left: 5px;
+	width: 95px;
 }
 
 /*footer*/
 
 .footer
 {
+	width: 926px;
+	border-top: solid 1px #cccccc;
+    margin-left: 42px;
+	padding-top: 24px;
+}
 
+.logo
+{
+	text-align: center;
+}
+
+.footer img
+{
+	width: 117px;
+	height: 33px;
+}
+
+.footer_navigation
+{
+	font: normal 10px arial;
+	margin-top: 16px;
+	padding-left: 245px;
+}
+
+.footer_navigation a
+{
+	color: #565656;
+    text-transform: uppercase;
+	text-decoration: none;
+	padding-right: 6px;
+	padding-left: 4px;
+}
+
+.comp
+{
+	font: normal 14px Arial;
+	color: #565656;
+	margin-top: 4px;
+	padding-bottom: 17px;
+	padding-left: 375px;
 }
