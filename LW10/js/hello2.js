@@ -15,7 +15,7 @@ function ChangeText() {
 		var zamena = document.getElementById('helloline').innerHTML;
 		helloline.innerHTML = " JavaScript is greeting your," + client + "!";
 	} else {
-		console.log("Houston you have a problem!");
+		console.log("Have a problem!");
 		return;
 	}
 }

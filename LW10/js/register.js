@@ -4,7 +4,7 @@ function checkData() {
     var e_mail = document.getElementById('mail').value;
 
     if (firstname == '') {
-        alert('Enter your name,plase!');
+        alert('Enter your name,please!');
         return false;
     } else {
         if (password == '') {
@@ -15,7 +15,7 @@ function checkData() {
             return false;
         }
         if (e_mail == '') {
-            alert('Enter your mail address');
+            alert('Enter your email address');
             return false;
         }
     }

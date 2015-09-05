@@ -36,7 +36,7 @@ function start_game() {
 	document.getElementById('reset').style.display = "block";
 	document.getElementById('steps').style.display = "block";
 
-	(function () {
+	(function game() {
 		var shb = document.createElement('input');
 		shb.type = 'button';
 		shb.style.cssText = 'height: 123px; width: 123px; font-weight: bold; font-size: 40px ';

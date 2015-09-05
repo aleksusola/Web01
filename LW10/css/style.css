@@ -1,0 +1,27 @@
+#registration_form
+{
+	width: 200px;
+	height: 300px;
+}
+
+div label 
+{
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+input[type="submit"]
+{
+	margin-top: 20px;
+}
+
+#steps 
+{
+	display:none;
+	text-align:center;
+	color: black;
+}
+#btns 
+{
+	text-align:center;
+}
